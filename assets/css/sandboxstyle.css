@@ -1,0 +1,66 @@
+html {
+  margin: 0px;
+  height: 100%;
+  background-color: #EBF8FF;
+  background-blend-mode: lighten;
+  overflow: hidden;
+}
+
+#topbar {
+  height: 90px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 64px;
+  margin-right: 64px;
+}
+
+#topbar h1 {
+  font-size: 32px;
+  color: #2A2A2A;
+}
+
+#colorchoice {
+  width: 288px;
+  padding: 10px;
+  background-color: #EBF8FF;
+  filter: brightness(88%);
+  border-radius: 9px;
+  text-align: center;
+}
+
+#colorchoice:hover {
+  filter: brightness(80%);
+}
+
+#content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  left: -27.5px;
+  top: 110px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 2px;
+}
+
+.row div{
+  transform: rotate(90deg);
+}
+
+.hexagon {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+}
+
+.hexagon img {
+  max-height: 100%;
+  padding: 3.5px;
+}

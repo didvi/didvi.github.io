@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="assets/css/thirdstyle.css">
+  <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="assets/js/thirdscript.js"></script>
+</head>
+<body>
+
+<div id="content">
+  <div class="copy" id="original">
+    <div id="row1">
+    <script type="text/javascript">
+      var hexagon = 24
+    	addHex = function () {$('#row1').append('<div class="hexagon"><img src="assets/img/hexagondarkblue.png"></div>')}
+    	for (hexagon; hexagon; hexagon--) {
+    		addHex();
+    	}
+    </script>
+
+    </div>
+
+  </div>
+
+  <script type="text/javascript">
+      $("#row1").clone().prop({ id: "row" + String(2) }).appendTo(".copy");
+      $("#row" + String(2)).css({"position": "relative", "left": "37px"});
+  </script>
+
+  <h1 id="title">Make them stop.</h1>
+  <script type="text/javascript">
+  function copyRow(i) {
+      $("#original").clone().prop({id: "copied" + String(i) }).appendTo("#content");
+      if (i % 2 == 0) {
+        $("#row" + String(i)).css({"position": "relative", "left": "39px"});
+      }
+
+  }
+  copyRow(3)
+  copyRow(4)
+  copyRow(5)
+  copyRow(6)
+  copyRow(7)
+  </script>
+
+
+</div>
+</body>
+</html>

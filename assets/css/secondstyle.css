@@ -1,0 +1,100 @@
+html {
+  margin: 0px;
+  background-color: #D5E0B5;
+  overflow: hidden;
+}
+
+.hexagon {
+  height: 64px;
+  transform: rotate(90deg);
+}
+
+.hexagon img {
+  max-height: 100%;
+}
+
+#content {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2px;
+}
+
+.copy div{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 16px;
+  transform: rotate(90deg);
+}
+
+#original {
+  position: absolute;
+  left: -800px;
+}
+
+#copied3 {
+  position: absolute;
+  left: -500px;
+  top: -752px;
+}
+
+#copied4 {
+  position: absolute;
+  left: -500px;
+  top: 1182px;
+  transform: rotate(90deg) scaleX(-1);
+}
+
+#copied5 {
+  position: absolute;
+  left: -200px;
+  top: -752px;
+}
+
+#copied6 {
+  position: absolute;
+  left: -200px;
+  top: 1148px;
+}
+
+#copied7 {
+  position: absolute;
+  left: 100px;
+  top: -712px;
+  transform: rotate(90deg) scaleX(-1);
+}
+
+#copied8 {
+  position: absolute;
+  left: 100px;
+  top: 1158px;
+}
+
+#copied9 {
+  position: absolute;
+  left: 400px;
+}
+
+#title {
+  text-align: center;
+  font-size: 66px;
+  color: #414141;
+  z-index: 1;
+  position: absolute;
+  left: 50%;
+  top: 250px;
+  transform: translate(-50%, -50%);
+}
+
+#title span {
+  color: #E8A16F;
+
+}

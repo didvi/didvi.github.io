@@ -1,0 +1,78 @@
+html {
+  margin: 0px;
+  background-color: #DED7DA;
+  overflow: hidden;
+}
+
+#content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  top: -22px;
+  left: -28px;
+  z-index: 1;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 2px;
+}
+
+.row div{
+  transform: rotate(90deg);
+}
+
+.hexagon {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+  opacity: 0;
+}
+
+.hexagon img {
+  max-height: 100%;
+  padding: 3.5px;
+}
+
+.text {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 18%;
+  z-index: 3;
+}
+
+#title {
+  font-size: 122px;
+  color: #414141;
+}
+
+#choices {
+  width: 800px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  position: absolute;
+  top: 57%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+
+#start, #sandbox {
+  font-size: 42px;
+  color: #414141;
+  text-decoration: none;
+  z-index: 2;
+}
+
+#start:visited, #sandbox:visited {
+  text-decoration: none;
+}
+
+#start:hover, #sandbox:hover {
+  text-decoration: underline;
+}

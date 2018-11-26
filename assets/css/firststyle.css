@@ -1,0 +1,52 @@
+html {
+  margin: 0px;
+  background-color: #EBF8FF;
+  overflow: hidden;
+}
+
+.hexagon {
+  height: 72px;
+}
+
+.hexagon img {
+  max-height: 100%;
+  padding: 2px;
+}
+
+#content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+.copy div{
+  transform: rotate(90deg);
+}
+
+.copy {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 2px;
+  position: relative;
+  top: -36px;
+}
+
+
+#content {
+  position: relative;
+  transform: rotate(-45deg);
+}
+
+
+#title {
+  padding-left: 72px;
+  padding-top: 36px;
+  font-size: 72px;
+  color: #414141;
+}
+
+#title span {
+  color: #F45B69;
+}

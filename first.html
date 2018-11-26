@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="assets/css/firststyle.css">
+  <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="assets/js/firstscript.js"></script>
+</head>
+<body>
+<h1 id="title">Make them pink<span class="pink">.<span></h1>
+<div id="content">
+  <div class="copy" id="row1">
+    <div class="hexagon">
+      <img src="assets/img/hexagon.png">
+    </div>
+    <script type="text/javascript">
+      var hexagon = 23
+    	addHex = function () {$('.copy').append('<div class="hexagon"><img src="assets/img/hexagon.png"></div>')}
+    	for (hexagon; hexagon; hexagon--) {
+    		addHex();
+    	}
+    </script>
+  </div>
+  <script type="text/javascript">
+    function copyRow(i) {
+        $("#row1").clone().prop({ id: "row" + String(i)}).appendTo("#content");
+        if (i % 2 == 0) {
+          $("#row" + String(i)).css({"position": "relative", "left": "44px"});
+        }
+    }
+    for (i = 2; i < 10; i++) {
+      copyRow(i);
+    }
+  </script>
+
+</div>
+</body>
+</html>

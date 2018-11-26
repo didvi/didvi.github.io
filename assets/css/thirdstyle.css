@@ -1,0 +1,107 @@
+html {
+  margin: 0px;
+  background-color: #253237;
+  overflow: hidden;
+}
+
+.hexagon {
+  height: 64px;
+  transform: rotate(90deg);
+
+}
+
+.hexagon img {
+  max-height: 100%;
+}
+
+#content {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2px;
+}
+
+.copy div{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 16px;
+}
+
+
+#title {
+  text-align: center;
+  font-size: 64px;
+  color: #C3D6D8;
+}
+
+#title span {
+  color: #CCE0E2;
+
+}
+/*
+1774.12 width of copied3
+*/
+
+@keyframes move {
+  to {
+    left: 1674.12px;
+  }
+}
+
+#original, #copied3 {
+  position: absolute;
+  top: 400px;
+  left: -1874.12px;
+}
+
+#original {
+  animation: move 16s linear infinite;
+
+}
+
+#copied3 {
+  animation: move 16s linear infinite;
+  animation-delay: 8s;
+}
+
+#copied4, #copied5 {
+  position: absolute;
+  top: 600px;
+  left: -1874.12px;
+}
+
+#copied4 {
+  animation: move 16s linear infinite;
+  animation-direction: reverse;
+}
+
+#copied5 {
+  animation: move 16s linear infinite;
+  animation-direction: reverse;
+  animation-delay: 8s;
+}
+
+#copied6, #copied7 {
+  position: absolute;
+  top: 200px;
+  left: -1874.12px;
+}
+
+#copied6 {
+  animation: move 16s linear infinite;
+  animation-direction: reverse;
+}
+
+#copied7 {
+  animation: move 16s linear infinite;
+  animation-direction: reverse;
+  animation-delay: 8s;
+}

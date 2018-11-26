@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="assets/css/fourthstyle.css">
+  <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="assets/js/fourthscript.js"></script>
+  <!-- no js file for home page rn-->
+</head>
+<body>
+<div id="content">
+  <div class="row" id="row1">
+    <!-- adds number of hexagons to the first row -->
+    <script type="text/javascript">
+      var hexagon = 18
+    	addHex = function (i) {
+        let addedHex = '<div class="hexagon ' + String(i)
+        addedHex += '"><img src="assets/img/hexagonrealpurple.png"></div>'
+        $('#row1').append(addedHex)
+        if (i % 4 == 0) {
+          $("." + String(i)).css("opacity", "1")
+        }
+      }
+    	for (hexagon; hexagon; hexagon--) {
+    		addHex(hexagon);
+    	}
+    </script>
+  </div>
+  <!-- copies first row i number of times, with id=rowi
+        also moves every second row over to keep rows properly aligned-->
+  <script type="text/javascript">
+    function copyRow(i) {
+        $("#row1").clone().prop({ id: "row" + String(i)}).appendTo("#content");
+        if (i % 2 == 0) {
+          $("#row" + String(i)).css({"position": "relative", "left": "-40px"});
+        }
+    }
+    for (i = 2; i < 11; i++) {
+      copyRow(i);
+    }
+  </script>
+</div>
+  <h1 id="title">Enter the 3rd Dimension.</h1>
+</body>
+</html>
