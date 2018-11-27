@@ -30,20 +30,20 @@ $(document).ready(function()  {
 
 //functionality of the page
   //decides the color palatte of the hexagons, first one is good but i would change the others
-  let pageColors1 = ["hexagondarkblue", "hexagonbackblue", "hexagonpink", "hexagonskyblue"];
-  let backgroundColor1 = "#EBF8FF";
+  let pageColors1 = ["blue1", "bluecontrast2", "blue2", "bluecontrast1"];
+  let backgroundColor1 = "#C0CDD6";
 
-  let pageColors2 = ["hexagonlightblue", "hexagonnicegreen", "hexagondarknicegreen", "hexagonpalegreen"];
-  let backgroundColor2 = "#D5E0B5";
+  let pageColors2 = ["green1", "greencontrast2", "green2", "greencontrast1"];
+  let backgroundColor2 = "#BAD9C2";
 
-  let pageColors3 = ["hexagonrealpurple", "hexagonmidpurple", "hexagondarkestpurple", "hexagonpurple"];
-  let backgroundColor3 = "#BB909D"
+  let pageColors3 = ["purple1", "purplecontrast1", "purple2", "purplecontrast2"];
+  let backgroundColor3 = "#DED7DA"
 
   let allPageColors = [pageColors1, pageColors2, pageColors3];
   let allBackgroundColors = [backgroundColor1, backgroundColor2, backgroundColor3];
 
 function changeHex(hexagon, hexagonColor) {
-  let imgSrc = "assets/img/" + hexagonColor + ".png";
+  let imgSrc = "assets/sandboximg/" + hexagonColor + ".png";
   $(hexagon).find('img').attr("src", imgSrc);
 }
 
@@ -51,13 +51,14 @@ function changeAll(imgSrc) {
   $(".hexagon").find('img').attr("src", imgSrc);
 }
 
+
 // returns a click function that should then be used to change the color of the hexagons
 function setHexagonColors(first, second, third, fourth) {
 
-  let firstSRC = "assets/img/" + first + ".png";
-  let secondSRC = "assets/img/" + second + ".png";
-  let thirdSRC = "assets/img/" + third + ".png";
-  let fourthSRC = "assets/img/" + fourth + ".png";
+  let firstSRC = "assets/sandboximg/" + first + ".png";
+  let secondSRC = "assets/sandboximg/" + second + ".png";
+  let thirdSRC = "assets/sandboximg/" + third + ".png";
+  let fourthSRC = "assets/sandboximg/" + fourth + ".png";
 
   changeAll(firstSRC);
 
@@ -89,8 +90,6 @@ $("#colorchoice").click(function() {
   //changes background color
   $("html").css("background-color", allBackgroundColors[pageColorIndex])
 });
-
-
 
 
 });

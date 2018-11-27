@@ -20,10 +20,6 @@ $(document).ready(function()  {
       let bottom2 = "#row" + String(rowNumber + 1) + " div:eq(" + String(24 - hexNumber) + ")"
       $(bottom2).css("opacity", "1");
 
-      console.log(bottom1)
-      console.log(bottom2)
-
-
     } else {
 
       let top1 = "#row" + String(rowNumber - 1) + " div:eq(" + String(24 - hexNumber) + ")"
@@ -103,5 +99,3 @@ $(document).ready(function()  {
 
 
 });
-
-// link to next page if all hexagons are pink

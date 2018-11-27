@@ -11,7 +11,7 @@ $(document).ready(function()  {
 
   });
 
-  // makes some divs dissapear
+  // makes some divs dissapear for asthetic reasons
   $(".copy div:eq(4)").css("opacity", "0");
   $(".copy div:eq(5)").css("opacity", "0");
   $(".copy div:eq(6)").css("opacity", "0");
@@ -54,5 +54,3 @@ $(document).ready(function()  {
   $("#row9 div:eq(20)").css("opacity", "0");
   $("#row9 div:eq(21)").css("opacity", "0");
 });
-
-// link to next page if all hexagons are pink
