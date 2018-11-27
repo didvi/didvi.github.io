@@ -40,7 +40,7 @@ html {
 #row1, #row2 {
   transform: rotate(60deg);
   position: relative;
-  bottom: 100px;
+  bottom: 40px;
 }
 
 #row3, #row4 {
@@ -60,9 +60,11 @@ html {
 
 #title {
   position: absolute;
-  left: 40%;
-  top: 4%;
-  font-size: 68px;
+  left: 47%;
+  top: 8%;
+  width: 500px;
+  font-size: 70px;
   color: #252328;
   text-align: center;
+  text-shadow: 2px 2px #888789;
 }
