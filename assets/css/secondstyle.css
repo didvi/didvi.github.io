@@ -3,6 +3,7 @@ html {
   background-color: #D5E0B5;
   overflow: hidden;
   font-family: "Times New Roman", Times, serif;
+  cursor: default;
 }
 
 .hexagon {

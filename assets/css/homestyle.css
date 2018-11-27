@@ -3,6 +3,7 @@ html {
   background-color: #DED7DA;
   overflow: hidden;
   font-family: "Times New Roman", Times, serif;
+  cursor: default;
 }
 
 #content {

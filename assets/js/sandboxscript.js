@@ -62,9 +62,6 @@ function setHexagonColors(first, second, third, fourth) {
   changeAll(firstSRC);
 
   function clickFunction(thing) {
-    console.log("changing hex")
-    console.log($(thing).find('img').attr("src"))
-    console.log(firstSRC, secondSRC, thirdSRC, fourthSRC)
     if ($(thing).find('img').attr("src") == firstSRC) {
       changeHex(thing, second);
     } else if ($(thing).find('img').attr("src") == secondSRC) {
@@ -82,7 +79,6 @@ var pageColorIndex = 0
 clickFunction = setHexagonColors.apply(this, allPageColors[pageColorIndex]);
 
 $(".hexagon").click(function() {
-  console.log("clicked")
   clickFunction(this);
 });
 

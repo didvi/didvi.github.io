@@ -3,6 +3,7 @@ html {
   background-color: #BBB5C6;
   overflow: hidden;
   font-family: "Times New Roman", Times, serif;
+  cursor: default;
 }
 
 #content {
@@ -35,6 +36,7 @@ html {
 
 .hexagon img {
   max-height: 100%;
+  cursor: pointer;
   user-drag: none;
   user-select: none;
   -moz-user-select: none;

@@ -12,6 +12,7 @@ $(document).ready(function()  {
     if (numberofHex == randomHex) {
       numberofHex += 1
       $(this).replaceWith('<a href="third.html"><div class="hexagon"><img src="assets/img/hexagonolive.png"></div></a>')
+      $(this).css("cursor", "pointer")
     }
   });
 });
