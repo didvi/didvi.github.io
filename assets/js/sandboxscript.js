@@ -30,16 +30,25 @@ $(document).ready(function()  {
 
 //functionality of the page
   //decides the color palatte of the hexagons, first one is good but i would change the others
-  let pageColors1 = ["hexagondarkblue", "hexagonbackblue", "hexagonpink", "hexagonskyblue"]
-  let pageColors2 = ["hexagonlightblue", "hexagonpalegreen", "hexagonnicegreen", "hexagondarknicegreen"]
-  let pageColors3 = ["hexagonolive", "hexagonlightolive", "hexagonburgundy", "hexagonlightburgundy"]
+  let pageColors1 = ["hexagondarkblue", "hexagonbackblue", "hexagonpink", "hexagonskyblue"];
+  let backgroundColor1 = "#EBF8FF";
 
-  let allPageColors = [pageColors1, pageColors2, pageColors3]
+  let pageColors2 = ["hexagonlightblue", "hexagonnicegreen", "hexagondarknicegreen", "hexagonpalegreen"];
+  let backgroundColor2 = "#D5E0B5";
 
+  let pageColors3 = ["hexagonrealpurple", "hexagonmidpurple", "hexagondarkestpurple", "hexagonpurple"];
+  let backgroundColor3 = "#BB909D"
+
+  let allPageColors = [pageColors1, pageColors2, pageColors3];
+  let allBackgroundColors = [backgroundColor1, backgroundColor2, backgroundColor3];
 
 function changeHex(hexagon, hexagonColor) {
   let imgSrc = "assets/img/" + hexagonColor + ".png";
   $(hexagon).find('img').attr("src", imgSrc);
+}
+
+function changeAll(imgSrc) {
+  $(".hexagon").find('img').attr("src", imgSrc);
 }
 
 // returns a click function that should then be used to change the color of the hexagons
@@ -49,6 +58,8 @@ function setHexagonColors(first, second, third, fourth) {
   let secondSRC = "assets/img/" + second + ".png";
   let thirdSRC = "assets/img/" + third + ".png";
   let fourthSRC = "assets/img/" + fourth + ".png";
+
+  changeAll(firstSRC);
 
   function clickFunction(thing) {
     console.log("changing hex")
@@ -61,10 +72,6 @@ function setHexagonColors(first, second, third, fourth) {
     } else if ($(thing).find("img").attr("src") == thirdSRC){
       changeHex(thing, fourth);
     } else if ($(thing).find('img').attr("src") == fourthSRC) {
-      changeHex(thing, first);
-    } else {
-      //idealy should never happen once colorchoice button is implemented
-      console.log("hexagon not in array")
       changeHex(thing, first);
     }
   }
@@ -82,8 +89,9 @@ $(".hexagon").click(function() {
 $("#colorchoice").click(function() {
   pageColorIndex = ((pageColorIndex + 1) % allPageColors.length);
   clickFunction = setHexagonColors.apply(this, allPageColors[pageColorIndex]);
-  //need to change background color
-  // TODO: make function to change color of hexagons not just change on next hex
+
+  //changes background color
+  $("html").css("background-color", allBackgroundColors[pageColorIndex])
 });
 
 

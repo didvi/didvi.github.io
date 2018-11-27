@@ -2,8 +2,8 @@ html {
   margin: 0px;
   height: 100%;
   background-color: #EBF8FF;
-  background-blend-mode: lighten;
   overflow: hidden;
+  font-family: "Times New Roman", Times, serif;
 }
 
 #topbar {
@@ -22,16 +22,12 @@ html {
 }
 
 #colorchoice {
-  width: 288px;
-  padding: 10px;
-  background-color: #EBF8FF;
-  filter: brightness(88%);
-  border-radius: 9px;
-  text-align: center;
+  text-decoration: none;
 }
 
 #colorchoice:hover {
-  filter: brightness(80%);
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 #content {
@@ -63,4 +59,10 @@ html {
 .hexagon img {
   max-height: 100%;
   padding: 3.5px;
+  user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }

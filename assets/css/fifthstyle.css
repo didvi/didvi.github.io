@@ -2,6 +2,7 @@ html {
   margin: 0px;
   background-color: #ABD1B5;
   overflow: hidden;
+  font-family: "Times New Roman", Times, serif;
 }
 
 #content {
@@ -32,6 +33,12 @@ html {
 
 .hexagon img {
   max-height: 100%;
+  user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 
 #title {
