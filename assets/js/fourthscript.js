@@ -28,7 +28,7 @@ function changeHex(hexagon, hexagonColor) {
 }
 
 function checkWin() {
-  if (changedHexes.length >= 110) {
+  if (changedHexes.length >= 67) {
         window.location.href = "fifth.html";
       }
 }

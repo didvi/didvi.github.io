@@ -12,14 +12,11 @@
   <div class="row" id="row1">
     <!-- adds number of hexagons to the first row -->
     <script type="text/javascript">
-      var hexagon = 18
+      var hexagon = 36
     	addHex = function (i) {
         let addedHex = '<div class="hexagon ' + String(i)
         addedHex += '"><img src="assets/img/hexagonrealpurple.png"></div>'
         $('#row1').append(addedHex)
-        if (i % 4 == 0) {
-          $("." + String(i)).css("opacity", "1")
-        }
       }
     	for (hexagon; hexagon; hexagon--) {
     		addHex(hexagon);
@@ -35,7 +32,7 @@
           $("#row" + String(i)).css({"position": "relative", "left": "-40px"});
         }
     }
-    for (i = 2; i < 11; i++) {
+    for (i = 2; i < 7; i++) {
       copyRow(i);
     }
   </script>

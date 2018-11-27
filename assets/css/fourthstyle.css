@@ -19,6 +19,7 @@ html {
   flex-direction: row;
   justify-content: center;
   padding-left: 40px;
+  padding-right: 40px;
 }
 
 .row div{
@@ -34,24 +35,34 @@ html {
 .hexagon img {
   max-height: 100%;
 }
+/*top moves rows left and right becuase its rotated */
 
-#row6, #row7, #row8, #row9, #row10 {
+#row1, #row2 {
+  transform: rotate(60deg);
   position: relative;
-  top: 150px;
+  bottom: 100px;
 }
 
-#row1 {
-  top: -200px;
+#row3, #row4 {
+  position: relative;
+  top: 800px;
 }
 
-#row9, #row10 {
-  top: 300px;
+#row5 div, #row6 div {
+  transform: rotate(90deg);
 }
+
+#row5, #row6 {
+  position: relative;
+  top: 960px;
+}
+
 
 #title {
   position: absolute;
-  left: 70%;
-  top: 2%;
+  left: 40%;
+  top: 4%;
   font-size: 68px;
   color: #252328;
+  text-align: center;
 }
