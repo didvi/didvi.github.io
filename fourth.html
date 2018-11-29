@@ -6,6 +6,7 @@
   <script src="assets/js/fourthscript.js"></script>
 </head>
 <body>
+<a href="fifth.html" id="title">Next.</a>
 <div id="content">
   <div class="row" id="row1">
     <!-- adds number of hexagons to the first row -->
@@ -13,8 +14,9 @@
       var hexagon = 36
     	addHex = function (i) {
         let addedHex = '<div class="hexagon ' + String(i)
-        addedHex += '"><img src="assets/img/hexagonrealpurple.png"></div>'
+        addedHex += '"><img src="assets/img/hexagondarknicegreen.png"></div>'
         $('#row1').append(addedHex)
+
       }
     	for (hexagon; hexagon; hexagon--) {
     		addHex(hexagon);
@@ -27,14 +29,14 @@
     function copyRow(i) {
         $("#row1").clone().prop({ id: "row" + String(i)}).appendTo("#content");
         if (i % 2 == 0) {
-          $("#row" + String(i)).css({"position": "relative", "left": "-40px"});
+          $("#row" + String(i)).css({"position": "relative", "left": "21px"});
         }
     }
-    for (i = 2; i < 7; i++) {
+    for (i = 2; i < 24; i++) {
       copyRow(i);
     }
   </script>
+
 </div>
-  <h1 id="title">Enter the third dimension.</h1>
 </body>
 </html>

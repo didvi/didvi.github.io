@@ -6,38 +6,37 @@
   <script src="assets/js/fifthscript.js"></script>
 </head>
 <body>
-<!--right now takes you back home, would change to Next. if had more pages -->
-<a href="index.html" id="title">Win.</a>
-<div id="content">
-  <div class="row" id="row1">
-    <!-- adds number of hexagons to the first row -->
-    <script type="text/javascript">
-      var hexagon = 36
-    	addHex = function (i) {
-        let addedHex = '<div class="hexagon ' + String(i)
-        addedHex += '"><img src="assets/img/hexagondarknicegreen.png"></div>'
-        $('#row1').append(addedHex)
+  <div id="wrapper">
+  <div id="content">
+    <div class="rows" id="row1">
+      <div id="odd">
+      <script type="text/javascript">
+        //rows in this page consists of a top and bottom thing of hexagons so that they always stay realigned
+        var hexagon = 14
+      	addHex = function () {$('#odd').append('<div class="hexagon"><img src="assets/img/hexagonrealpurple.png"></div>')}
+      	for (hexagon; hexagon; hexagon--) {
+      		addHex();
+      	}
+        //adds the bottom part of the first row
+        $("#odd").clone().prop({ id: "even"}).appendTo("#row1");
+        $("#even").css({"position": "relative", "top": "36px", "left": "-20px"});
 
-      }
-    	for (hexagon; hexagon; hexagon--) {
-    		addHex(hexagon);
-    	}
-    </script>
-  </div>
-  <!-- copies first row i number of times, with id=rowi
-        also moves every second row over to keep rows properly aligned-->
-  <script type="text/javascript">
+      </script>
+      </div>
+    </div>
+    <script type="text/javascript">
     function copyRow(i) {
-        $("#row1").clone().prop({ id: "row" + String(i)}).appendTo("#content");
-        if (i % 2 == 0) {
-          $("#row" + String(i)).css({"position": "relative", "left": "21px"});
-        }
+        $("#row1").clone().prop({id: "row" + String(i) }).appendTo("#content");
+
     }
-    for (i = 2; i < 24; i++) {
+    for (i = 2; i < 4; i++) {
       copyRow(i);
     }
-  </script>
 
+    </script>
+  </div>
+</div>
+  <h1 id="title">Enter the third dimension.</h1>
 </div>
 </body>
 </html>

@@ -1,6 +1,6 @@
 html {
   margin: 0px;
-  background-color: #BBB5C6;
+  background-color: #ABD1B5;
   overflow: hidden;
   font-family: "Times New Roman", Times, serif;
   cursor: default;
@@ -11,32 +11,29 @@ html {
   flex-direction: column;
   justify-content: center;
   position: absolute;
-  top: -10px;
-  left: -100px;
-  transform: rotate(60deg);
+  top: -22px;
+  left: -24px;
 }
 
 .row {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding-left: 40px;
-  padding-right: 40px;
 }
 
 .row div{
-  transform: rotate(330deg);
+  transform: rotate(90deg);
 }
 
 .hexagon {
-  height: 68px;
+  height: 36px;
   width: auto;
   object-fit: contain;
+  z-index: 3
 }
 
 .hexagon img {
   max-height: 100%;
-  cursor: pointer;
   user-drag: none;
   user-select: none;
   -moz-user-select: none;
@@ -44,36 +41,17 @@ html {
   -webkit-user-select: none;
   -ms-user-select: none;
 }
-/*top moves rows left and right becuase its rotated */
-
-#row1, #row2 {
-  transform: rotate(60deg);
-  position: relative;
-  bottom: 40px;
-}
-
-#row3, #row4 {
-  position: relative;
-  top: 800px;
-}
-
-#row5 div, #row6 div {
-  transform: rotate(90deg);
-}
-
-#row5, #row6 {
-  position: relative;
-  top: 960px;
-}
-
 
 #title {
   position: absolute;
-  left: 47%;
-  top: 8%;
-  width: 500px;
-  font-size: 70px;
-  color: #252328;
-  text-align: center;
-  text-shadow: 2px 2px #888789;
+  left: 18%;
+  top: 70%;
+  font-size: 38px;
+  color: #ABD1B5;
+  z-index: 2;
+  text-decoration: none;
+}
+
+#title:visited {
+  text-decoration: none;
 }

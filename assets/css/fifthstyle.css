@@ -1,39 +1,43 @@
 html {
   margin: 0px;
-  background-color: #ABD1B5;
-  overflow: hidden;
+  background-color: #BBB5C6;
   font-family: "Times New Roman", Times, serif;
   cursor: default;
 }
 
-#content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: absolute;
-  top: -22px;
-  left: -24px;
+body {
+  margin: 0px;
 }
 
-.row {
+/* make work for other screens */
+#wrapper {
+  width: 1440px;
+  height: 900px;
+  overflow: hidden;
+}
+
+#content {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  position: relative;
 }
 
-.row div{
-  transform: rotate(90deg);
+.rows {
+  display: flex;
+  flex-direction: row;
+
 }
 
 .hexagon {
-  height: 36px;
-  width: auto;
-  object-fit: contain;
-  z-index: 3
+  height: 64px;
+  padding: 4px;
 }
 
 .hexagon img {
+  transform: rotate(60deg);
   max-height: 100%;
+  cursor: pointer;
   user-drag: none;
   user-select: none;
   -moz-user-select: none;
@@ -42,16 +46,38 @@ html {
   -ms-user-select: none;
 }
 
-#title {
-  position: absolute;
-  left: 18%;
-  top: 70%;
-  font-size: 38px;
-  color: #ABD1B5;
-  z-index: 2;
-  text-decoration: none;
+
+/*top moves rows left and right becuase its rotated */
+#row1 {
+  transform: rotate(-40deg);
+  position: relative;
+  top: 80px;
+  left: -12%;
 }
 
-#title:visited {
-  text-decoration: none;
+#row2 {
+  transform: rotate(-40deg);
+  position: relative;
+  top: 80px;
+  left:8%;
+}
+
+#row3 {
+  transform: rotate(-40deg);
+  position: relative;
+  top: 80px;
+  left: 28%;
+}
+
+
+#title {
+  width: 1000px;
+  position: absolute;
+  left: 5%;
+
+  top: 3%;
+  font-size: 64px;
+  color: #252328;
+  text-align: center;
+  text-shadow: 2px 2px #888789;
 }
