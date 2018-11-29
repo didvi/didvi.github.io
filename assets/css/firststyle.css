@@ -1,9 +1,19 @@
 html {
   margin: 0px;
   background-color: #D7E8F2;
-  overflow: hidden;
   font-family: "Times New Roman", Times, serif;
   cursor: default;
+}
+
+body {
+  margin: 0px;
+}
+
+/* make work for other screens */
+#wrapper {
+  width: 1440px;
+  height: 900px;
+  overflow: hidden;
 }
 
 .hexagon {
@@ -25,6 +35,8 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
+  transform: rotate(-45deg);
 }
 
 
@@ -40,13 +52,6 @@ html {
   position: relative;
   top: -36px;
 }
-
-
-#content {
-  position: relative;
-  transform: rotate(-45deg);
-}
-
 
 #title {
   padding-left: 72px;

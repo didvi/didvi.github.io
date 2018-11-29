@@ -1,9 +1,19 @@
 html {
   margin: 0px;
   background-color: #D5E0B5;
-  overflow: hidden;
   font-family: "Times New Roman", Times, serif;
   cursor: default;
+}
+
+body {
+  margin: 0px;
+}
+
+/* make work for other screens */
+#wrapper {
+  width: 1440px;
+  height: 900px;
+  overflow: hidden;
 }
 
 .hexagon {
@@ -27,6 +37,7 @@ html {
   flex-direction: column;
   justify-content: center;
   padding: 2px;
+  position: relative;
 }
 
 .copy div{
