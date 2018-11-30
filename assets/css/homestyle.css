@@ -51,11 +51,13 @@ html {
   transform: translateX(-50%);
   top: 18%;
   z-index: 3;
+  pointer-events: none;
 }
 
 #title {
   font-size: 122px;
   color: #414141;
+  pointer-events: none;
 }
 
 #choices {
@@ -68,6 +70,7 @@ html {
   left: 50%;
   transform: translateX(-50%);
   z-index: 3;
+  pointer-events: all;
 }
 
 #start, #sandbox {
