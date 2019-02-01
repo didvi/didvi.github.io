@@ -1,0 +1,184 @@
+html {
+    margin: 0px;
+    background-color: #2F3E46;
+    cursor: default;
+    font-family: 'Inconsolata', monospace;
+}
+
+body {
+    margin: 0;
+}
+
+#wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#navbar {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#timer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #819D96;
+    height: 100%;
+    width: 150px;
+    color: #2F3E46;
+    font-size: 36px;
+    text-align: center;
+}
+
+#options {
+    width: 150px;
+
+}
+
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #CAD2C5;
+    height: 100%;
+    color: #2F3E46;
+    text-decoration: none;
+    font-family: 'Inconsolata', monospace;
+    font-size: 30px;
+    margin-right: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+#text {
+    width: 80%;
+    height: 220px;
+    margin: 60px;
+    margin-bottom: 70px;
+}
+
+#text p {
+    position: relative;
+    top: -260px;
+    left: 2px;
+    font-size: 32px;
+    line-height: 1.2;
+    z-index: 2;
+    color: #819D96;
+    opacity: 0.6;
+    user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    pointer-events: none;
+}
+
+#typingbox {
+    width: 100%;
+    height: 223px;
+    border: none;
+    background-color: transparent;
+    color: #819D96;
+    font-family: 'Inconsolata', monospace;
+    font-size: 32px;
+    line-height: 1.2;
+    z-index: 1;
+    resize: none;
+    outline: none;
+    overflow: auto;
+    user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+#resultbox {
+    position: absolute;
+    margin-top: 110px;
+    width: 80%;
+    height: 233px;
+    background-color: #819D96;
+    z-index: 3;
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#resultbox button {
+    height: 50px;
+}
+
+#resultbox div {
+    width: 50%;
+    height: 100%;
+    background-color: #819D96;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#resultbox :first-child {
+    background-color: #CAD2C5;
+    color: #2F3E46;
+    font-family: 'Inconsolata', monospace;
+    font-size: 30px;
+    line-height: 1.6;
+
+}
+
+.rows {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.hexagon {
+    height: 82px;
+    width: auto;
+    object-fit: contain;
+    display: grid;
+}
+  
+.hexagon img, .keys {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.hexagon img {
+    max-height: 100%;
+    user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    transform: rotate(90deg);
+}
+
+.keys {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    font-family: 'Inconsolata', monospace;
+    font-size: 22px;
+    color: #12171A;
+    user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}

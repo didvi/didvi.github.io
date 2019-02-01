@@ -2,7 +2,7 @@ html {
   margin: 0px;
   background-color: #DED7DA;
   overflow: hidden;
-  font-family: "Times New Roman", Times, serif;
+  font-family: 'Inconsolata', monospace;
   cursor: default;
 }
 
@@ -61,16 +61,16 @@ html {
 }
 
 #choices {
-  width: 800px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-around;
   position: absolute;
-  top: 57%;
-  left: 50%;
+  top: 52%;
+  left: 37%;
   transform: translateX(-50%);
   z-index: 3;
   pointer-events: all;
+  line-height: 2;
 }
 
 #start, #sandbox {

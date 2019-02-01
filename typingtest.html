@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="assets/css/typingstyle.css">
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="assets/js/typingscript.js"></script>
+</head>
+<body>
+  <div id="wrapper">
+  <div id="navbar">
+    <div id="timer">
+      0:00
+    </div>
+    <button class="button" id="options" >
+      Options
+    </button>
+  </div>
+  <div id="text">
+    <textarea id="typingbox" name="typingbox" type="text" tabindex="1" autofocus></textarea>
+    <p>text will appear here</p>
+  </div>
+
+  <div id='resultbox'> 
+    <div>
+    </div>
+
+    <!--taken away till fully functional <div>
+        <button id='restart'>Restart</button>
+        <button>Options</button>
+    </div> -->
+  </div>
+
+  <div id="keyboard">
+    <div class="rows" id="row0">
+    </div>
+    <div class="rows" id="row1">
+    </div>
+    <div class="rows" id="row2">
+    </div>
+    <div class="rows" id="row3">
+    </div>
+    
+    <script type="text/javascript">
+        //rows in this page consists of a top and bottom thing of hexagons so that they always stay realigned
+      	addHex = function (row, hexCount) {
+              for (i = 0; i < hexCount; i++) {
+                  $("#" + row).append('<div class="hexagon"><img src="assets/imgs/hex5.png"><div class="keys" id=' + String(i) + row + '></div></div>')
+      	        }
+            }
+        addHex('row0', 13)
+      	addHex('row1', 12);
+        addHex('row2', 11);
+        addHex('row3', 10);
+
+    </script>
+  </div>
+</div>
+</div>
+</body>
+</html>
