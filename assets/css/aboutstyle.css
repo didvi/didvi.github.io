@@ -1,0 +1,48 @@
+html {
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: auto;
+    font-family: 'Inconsolata', monospace;
+    cursor: default;
+}
+
+body {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+#background {
+    padding: 0px;
+    position: absolute;
+    left: -520px;
+    width: 158%;
+    z-index: 1;
+}
+
+#wrapper {
+    position: absolute;
+    z-index: 2;
+}
+
+h1{
+    font-size: 32px;
+}
+
+p{
+    font-size: 22px;
+}
+
+#yellow-hexes {
+    position: relative;
+    top: 80px;
+    left: 620px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#yellow-hexes div {
+    padding-bottom: 960px;
+    text-align: center;
+}
