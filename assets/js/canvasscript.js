@@ -11,6 +11,13 @@ var mouse = {
     y: undefined
 }
 
+function distance(x1, y1, x2, y2) {
+    var xd = x1 - x2;
+    var yd = y1 - y2;
+
+    return Math.sqrt(Math.pow(xd, 2) + Math.pow(yd, 2))
+}
+
 class Hexagon {
     constructor(x, y, size, color) {
         this.x = x;
@@ -36,9 +43,20 @@ class Hexagon {
     };
 }
 
+var player = new Hexagon(0, 0, 30, "#234234");
+
+window.addEventListener('mousemove', function(event) {
+    mouse.x = event.x;
+     mouse.y = event.y;
+
+     player.x = event.x;
+    player.y = event.y;
+    console.log(mouse.x, mouse.y);
+})
+
 class Enemy extends Hexagon {
     constructor(x, y, size, dx, dy) {
-        super(x, y, size, "4d4d4d")
+        super(x, y, size, "#4d4d4d")
         this.dx = dx;
         this.dy = dy;
     }
@@ -51,6 +69,10 @@ class Enemy extends Hexagon {
             this.dy = -this.dy;
         }
 
+        if (distance(this.x, this.y, player.x, player.y) < this.size / 2 + player.size / 2) {
+            this.color = player.color;
+        }
+
         this.x += this.dx;
         this.y += this.dy;
 
@@ -58,16 +80,6 @@ class Enemy extends Hexagon {
     }
 }
 
-var player = new Hexagon(0, 0, 30, "#234234");
-
-window.addEventListener('mousemove', function(event) {
-    mouse.x = event.x;
-     mouse.y = event.y;
-
-     player.x = event.x;
-    player.y = event.y;
-    console.log(mouse.x, mouse.y);
-})
 
 var numEnemies = 10;
 var enemies = [];
