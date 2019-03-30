@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="assets/css/canvasstyle.css">
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+    <canvas id="canvas" width="1000" height="1000">
+    </canvas>
+    <script src="assets/js/canvasscript.js"></script>
+    <div id="startScreen">
+      <h1>Avoid the Hexagons.</h1>
+      <div class="buttons">
+        <div class="startGame" id="firstStart">START</div>
+        <a class="quitLink" href="index.html"><div class="quit">QUIT</div></a>
+      </div>
+    </div>
+    <div id="restartScreen">
+        <h1>Game Over.</h1>
+        <h2 id="currScore">Current Score: </h2>
+        <h2 id="highScore">High Score: </h2>
+        <div class="buttons">
+          <div class="startGame" id="restart">RESTART</div>
+          <a class="quitLink" href="index.html"><div class="quit">QUIT</div></a>
+        </div>
+      </div>
+</body>
+</html>

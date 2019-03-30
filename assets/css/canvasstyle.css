@@ -1,0 +1,67 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Inconsolata', monospace;
+}
+
+#canvas {
+    background-color: #B1CCD3;
+}
+
+#startScreen, #restartScreen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#restartScreen {
+    display: none;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 60px;
+}
+
+h1 {
+    font-size: 86px;
+    font-weight: unset;
+    padding-top: 180px;
+    color: #1C1F25;
+}
+
+#restartScreen h1 {
+    padding-top: 10px;
+}
+
+#restartScreen div {
+    margin-top: 10px; 
+}
+
+.startGame, .quit {
+    height: 50px;
+    width: 200px;
+    vertical-align: middle;
+    line-height: 50px;  
+    background-color: #57737A;
+    border-radius: 3px;
+    text-align: center;
+    color: #F9FBF8;
+    font-size: 26px;
+    text-decoration: none;
+    cursor: pointer;
+    margin: 20px;
+}
+
+.quit:visited {
+    text-decoration: none;
+}
+
+.quitLink {
+    text-decoration: none;
+}
