@@ -4,7 +4,6 @@ $(document).ready(function()  {
     if ($(this).find('img').attr("src") != "assets/img/hexagonpink.png" && $(this).css("opacity") != "0") {
       pinkHex += 1
     }
-    console.log(pinkHex)
     $(this).find('img').attr("src", "assets/img/hexagonpink.png")
   if (pinkHex >= 103) {
     window.location.href = "second.html"
