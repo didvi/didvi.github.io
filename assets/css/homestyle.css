@@ -60,7 +60,7 @@ html {
   pointer-events: none;
 }
 
-#choices {
+#choices, #about {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -74,25 +74,21 @@ html {
 }
 
 #about {
-  position: absolute;
-  top: 65.2%;
   left: 70%;
-  z-index: 3;
-  pointer-events: all;
-
 }
 
-#start, #sandbox, #typingtest, #about-link {
+.text a {
   font-size: 42px;
   color: #414141;
   text-decoration: none;
   z-index: 2;
 }
 
-#start:visited, #sandbox:visited, #typingtest:visited, #about-link:visited {
+
+.text a:visited {
   text-decoration: none;
 }
 
-#start:hover, #sandbox:hover, #typingtest:hover, #about-link:hover {
+.text a:hover {
   text-decoration: underline;
 }
