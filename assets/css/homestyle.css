@@ -71,6 +71,8 @@ html {
   z-index: 3;
   pointer-events: all;
   line-height: 2;
+  height: 240px;
+  pointer-events: none;
 }
 
 #about {
@@ -87,6 +89,7 @@ html {
   color: #414141;
   text-decoration: none;
   z-index: 2;
+  pointer-events: all;
 }
 
 #start:visited, #sandbox:visited, #typingtest:visited, #about-link:visited {
@@ -95,4 +98,8 @@ html {
 
 #start:hover, #sandbox:hover, #typingtest:hover, #about-link:hover {
   text-decoration: underline;
+}
+
+.text a{
+  height: 0px;
 }
