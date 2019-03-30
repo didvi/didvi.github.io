@@ -68,9 +68,9 @@ $(document).ready(function()  {
                 this.dy = -this.dy;
             }
 
-            if (this.checkCollision() && isGameStarted) {
+            if (this.checkCollision() && startTime < 0) {
                 this.color = player.color;
-                isGameEnded = true;
+                isGameStarted = false;
             }
 
             this.x += this.dx;
@@ -94,15 +94,14 @@ $(document).ready(function()  {
 
     var startTime = 3; 
     var isGameStarted = false;
-    var isGameEnded = false;
     var score = 0;
     var highScore = 0;
 
     function keepScore() {
-        window.setInterval(() => {if (isGameStarted) score += 1;}, 1000)
+        score = -startTime
     }
 
-    function displayTimer() {
+    function keepTime() {
         if (startTime > 0) {
             c.font="30px Inconsolata";
             c.fillStyle = "black";
@@ -110,7 +109,11 @@ $(document).ready(function()  {
             c.fillText("Get Ready", innerWidth / 2, innerHeight / 2);
             c.fillText(String(startTime), innerWidth / 2, innerHeight / 2 + 40);
         } else {
-            isGameStarted = true;
+            keepScore();
+            c.font="30px Inconsolata";
+            c.fillStyle = "black";
+            c.textAlign = "center";
+            c.fillText("Current Score: " + String(score), 180 , 90);
         }
     }
 
@@ -130,17 +133,17 @@ $(document).ready(function()  {
     }
 
     function startGame() {
-        isGameEnded = false;
+        isGameStarted = true;
 
         $("#canvas").css("cursor", "none");
         makeEnemies();
-        displayTimer();
-        window.setInterval(() => { if (startTime > 0) startTime -= 1}, 1000);
+        keepTime();
+        window.setInterval(() => {startTime -= 1}, 1000);
         animate();
     }
 
     function animate() {
-        if (isGameEnded == true) {
+        if (isGameStarted == false) {
             c.clearRect(0, 0, innerWidth, innerHeight);
             endGame();
         } else {
@@ -153,21 +156,22 @@ $(document).ready(function()  {
                 var e = enemies[i];
                 e.move();
             }
-            
-            if (isGameStarted == false) {
-                displayTimer();
-            }
+            keepTime();
         }
     }
 
     function endGame() {
         $("#canvas").css("cursor", "auto");
         $("#restartScreen").css("display", "initial");
-        isGameStarted = false;
+        isTimerStarted = false;
+
+        highScore = Math.max(highScore, score);
+        $("#currScore").text("Your score: " + String(score));
+        $("#highScore").text("High score: " + String(highScore));
     }
 
     function restart() {
-        isGameEnded = false;
+        isGameStarted = true;
 
         enemies = [];
         numEnemies = 10;
@@ -175,7 +179,7 @@ $(document).ready(function()  {
 
         $("#canvas").css("cursor", "none");
         makeEnemies();
-        displayTimer();
+        keepTime();
         animate()
     }
 
