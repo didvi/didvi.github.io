@@ -35,6 +35,13 @@ $(document).ready(function()  {
       $(bottom2).css("opacity", "1");
 
     }
+
+    if (hexNumber == 24) {
+      let side2 = "#row" + String(rowNumber) + " div:eq(" + String(25 - hexNumber) + ")"
+      $(side2).css("opacity", "1");
+      return;
+    }
+
     let side1 = "#row" + String(rowNumber) + " div:eq(" + String(23 - hexNumber) + ")"
     $(side1).css("opacity", "1");
 
@@ -67,8 +74,6 @@ $(document).ready(function()  {
       let bottom2 = "#row" + String(rowNumber + 1) + " div:eq(" + String(24 - hexNumber) + ")"
       $(bottom2).css("opacity", "0.4");
 
-
-
     } else {
 
       let top1 = "#row" + String(rowNumber - 1) + " div:eq(" + String(24 - hexNumber) + ")"
@@ -84,6 +89,13 @@ $(document).ready(function()  {
       $(bottom2).css("opacity", "0.4");
 
     }
+
+    if (hexNumber == 24) {
+      let side2 = "#row" + String(rowNumber) + " div:eq(" + String(25 - hexNumber) + ")"
+      $(side2).css("opacity", "0.4");
+      return;
+    }
+
     let side1 = "#row" + String(rowNumber) + " div:eq(" + String(23 - hexNumber) + ")"
     $(side1).css("opacity", "0.4");
 
